@@ -1,645 +1,396 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet"
-          href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pVn0FLhYgR7vS1WlpKdtp32FtG+z6kjfEJ+cB7yyjl8Y1mJvXEI6GJ+XH6m2mCKmYQ6Zn0QYQ3vZPKE2z0W2MQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Instagram Clone</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Watch unlimited movies and TV shows on our Netflix-inspired streaming platform">
+    <meta name="keywords" content="streaming, movies, TV shows, Netflix clone, HTML CSS">
+    <title>StreamFlix - Watch Movies & TV Shows Online</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="container">
-                <div class="logo">
-                    <a href="#">
-                      <img src=
-"https://picsum.photos/id/1011/200/200" 
-                        alt="img1" height="30px">
-                    </a>
-                </div>
-                <div class="searchbar">
-                    <input type="text" 
-                           placeholder="Search">
-                    <img src=
-"https://picsum.photos/id/1025/40/40"
-                         height="18"
-                         alt="img2">
-                </div>
-                <div class="nav-links">
-                    <div class="action">
-                        <div class="profile">
-                            <img src="https://picsum.photos/id/1012/200/200" 
-                                 alt="user Avatar">
-                        </div>
-                    </div>
-                </div>
+    <header class="navbar" role="banner">
+        <div class="navbar-container">
+            <div class="navbar-left">
+                <h1 class="logo" aria-label="StreamFlix Home">STREAMFLIX</h1>
+                <nav class="nav-links" role="navigation" aria-label="Main navigation">
+                    <a href="#home" class="active" aria-current="page">Home</a>
+                    <a href="#series">TV Shows</a>
+                    <a href="#movies">Movies</a>
+                    <a href="#latest">New & Popular</a>
+                    <a href="#mylist">My List</a>
+                </nav>
             </div>
-        </nav>
-    </header>
-    <main>
-        <div class="container">
-            <div class="main-feed">
-                <div class="statuses">
-                    <div class="status">
-                        <div class="image">
-                            <img src="https://picsum.photos/id/1013/300/243"
-                                 alt="img3">
-                        </div>
-                    </div>
-                    <div class="status">
-                        <div class="image">
-                            <img src="https://picsum.photos/id/1014/200/200" 
-                                 alt="img4">
-                        </div>
-                    </div>
-                    <div class="status">
-                        <div class="image">
-                            <img src="https://picsum.photos/id/1015/200/200" 
-                                 alt="img5">
-                        </div>
-                    </div>
-                    <div class="status">
-                        <div class="image">
-                            <img src="https://picsum.photos/id/1016/200/200" 
-                                 alt="img6">
-                        </div>
-                    </div>
-                    <div class="status">
-                        <div class="image">
-                            <img src="https://picsum.photos/id/1017/200/200" 
-                                 alt="img7">
-                        </div>
-                    </div>
-                    <div class="status">
-                        <div class="image">
-                            <img src="https://picsum.photos/id/1018/300/243" 
-                                 alt="img8">
-                        </div>
-                    </div>
+            <div class="navbar-right">
+                <div class="search-container">
+                    <label for="search-input" class="search-icon" aria-label="Search">
+                        <i class="fas fa-search" aria-hidden="true"></i>
+                    </label>
+                    <input type="search" id="search-input" class="search-input" placeholder="Titles, people, genres" aria-label="Search for titles, people, or genres">
                 </div>
-              
-                <div class="card">
-                    <div class="top">
-                        <div class="userDetails">
-                            <div class="profilepic">
-                                <div class="profile_img">
-                                    <div class="image">
-                                        <img src="https://picsum.photos/id/1019/200/200" 
-                                            alt="img8">
-                                    </div>
-                                </div>
-                            </div>
-                            <h3>Ayush Agarwal
-                                  <br>
-                                  <span>Mumbai, India</span>
-                          </h3>
-                        </div>
-                        <div>
-                            <span class="dot">
-                                <i class="fas fa-ellipsis-h"></i>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="imgBx">
-                        <img src=
-"https://picsum.photos/id/1016/298/300" 
-                            alt="post-1" class="cover">
-                    </div>
-                    <div class="bottom">
-                        <div class="actionBtns">
-                            <div class="left">
-                                <span class="heart" 
-                                      onclick="addlike()">
-                                    <span>
-                                        <svg aria-label="Like" 
-                                             color="#262626" 
-                                             fill="#262626" 
-                                             height="24" 
-                                             role="img"
-                                             viewBox="0 0 48 48" 
-                                             width="24">
-                                            <!-- Coordinate path  -->
-
-                                            <path
-                                                d="M34.6 6.1c5.7 0 10.4 5.2 10.4 
-                                                11.5 0 6.8-5.9 11-11.5 16S25 41.3 24 
-                                                41.9c-1.1-.7-4.7-4-9.5-8.3-5.7-5-11.5-9.2-11.5-16C3 
-                                                11.3 7.7 6.1 13.4 6.1c4.2 0 6.5 2 8.1 4.3 
-                                                1.9 2.6 2.2 3.9 2.5 3.9.3 0 .6-1.3 2.5-3.9 
-                                                1.6-2.3 3.9-4.3 8.1-4.3m0-3c-4.5 0-7.9 
-                                                1.8-10.6 5.6-2.7-3.7-6.1-5.5-10.6-5.5C6 3.1 
-                                                0 9.6 0 17.6c0 7.3 5.4 12 10.6 16.5.6.5 1.3 
-                                                1.1 1.9 1.7l2.3 2c4.4 3.9 6.6 5.9 7.6 6.5.5.3 
-                                                1.1.5 1.6.5.6 0 1.1-.2 1.6-.5 1-.6 2.8-2.2 
-                                                7.8-6.8l2-1.8c.7-.6 1.3-1.2 2-1.7C42.7 29.6 
-                                                48 25 48 17.6c0-8-6-14.5-13.4-14.5z">
-                                            </path>
-                                        </svg>
-                                    </span>
-                                </span>
-                                <svg aria-label="Comment" 
-                                     class="_8-yf5 " 
-                                     color="#262626" 
-                                     fill="#262626" 
-                                     height="24"
-                                     role="img" 
-                                     viewBox="0 0 48 48" 
-                                     width="24">
-                                  
-                              <!-- Coordinate path  -->
-                                    <path clip-rule="evenodd"
-                                        d="M47.5 46.1l-2.8-11c1.8-3.3 2.8-7.1 2.8-11.1C47.5 
-                                        11 37 .5 24 .5S.5 11 .5 24 11 47.5 24 47.5c4 0 
-                                        7.8-1 11.1-2.8l11 2.8c.8.2 1.6-.6 1.4-1.4zm-3-22.1c0 
-                                        4-1 7-2.6 10-.2.4-.3.9-.2 1.4l2.1 
-                                        8.4-8.3-2.1c-.5-.1-1-.1-1.4.2-1.8 1-5.2 2.6-10 
-                                        2.6-11.4 0-20.6-9.2-20.6-20.5S12.7 3.5 24 3.5 
-                                        44.5 12.7 44.5 24z"
-                                        fill-rule="evenodd">
-                                  </path>
-                                </svg>
-                                <svg aria-label="Share Post" 
-                                     class="_8-yf5 " 
-                                     color="#262626" 
-                                     fill="#262626" 
-                                     height="24"
-                                     role="img"
-                                     viewBox="0 0 48 48" 
-                                     width="24">
-                                    <path
-                                        d="M47.8 3.8c-.3-.5-.8-.8-1.3-.8h-45C.9 3.1.3 
-                                        3.5.1 4S0 5.2.4 5.7l15.9 15.6 5.5 22.6c.1.6.6 
-                                        1 1.2 1.1h.2c.5 0 1-.3 
-                                        1.3-.7l23.2-39c.4-.4.4-1 .1-1.5zM5.2 
-                                        6.1h35.5L18 18.7 5.2 6.1zm18.7 
-                                        33.6l-4.4-18.4L42.4 8.6 23.9 39.7z">
-                                    </path>
-                                </svg>
-                            </div>
-                            <div class="right">
-                                <svg aria-label="Save" 
-                                     class="_8-yf5 " 
-                                     color="#262626" 
-                                     fill="#262626" 
-                                     height="24"
-                                     role="img" 
-                                     viewBox="0 0 48 48" 
-                                     width="24">
-                                  <!-- Coordinate path  -->
-                                    <path
-                                        d="M43.5 48c-.4 0-.8-.2-1.1-.4L24 29 5.6 
-                                        47.6c-.4.4-1.1.6-1.6.3-.6-.2-1-.8-1-1.4v-45C3 .7 
-                                        3.7 0 4.5 0h39c.8 0 1.5.7 1.5 1.5v45c0 .6-.4 
-                                        1.2-.9 1.4-.2.1-.4.1-.6.1zM24 26c.8 
-                                        0 1.6.3 2.2.9l15.8 16V3H6v39.9l15.8-16c.6-.6 
-                                        1.4-.9 2.2-.9z">
-                                    </path>
-                                </svg>
-                            </div>
-                        </div>
-                        <a href="#">
-                            <p class="likes">203 likes</p>
-
-                        </a>
-                        <a href="#">
-                            <p class="message">
-                              <b>Raju Modi</b>
-                            </p>
-
-                        </a>
-                        <a href="#">
-                            <h4 class="comments">View all 32 comments</h4>
-                        </a>
-                        <a href="#">
-                            <h5 class="postTime">2 hours ago</h5>
-                        </a>
-                        <div class="addComments">
-                            <div class="reaction">
-                                <h3>
-                                  <i class="far fa-smile"></i>
-                                </h3>
-                            </div>
-                            <input type="text"
-                                   class="text"
-                                   placeholder="Add a comment...">
-                            <a href="#">Post</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="top">
-                        <div class="userDetails">
-                            <div class="profilepic">
-                                <div class="profile_img">
-                                    <div class="image">
-                                        <img src="https://picsum.photos/id/1020/200/200" 
-                                            alt="img9">
-                                    </div>
-                                </div>
-                            </div>
-                            <h3>Piyush Agarwal<br>
-                              <span>Delhi, India</span>
-                             </h3>
-                        </div>
-                        <div>
-                            <span class="dot">
-                                <i class="fas fa-ellipsis-h"></i>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="imgBx">
-                        <img src=
-"https://picsum.photos/id/1018/300/297" 
-                            alt="post-1" class="cover">
-                    </div>
-                    <div class="bottom">
-                        <div class="actionBtns">
-                            <div class="left">
-                                <span class="heart" 
-                                      onclick="addlike()">
-                                    <span>
-                                        <svg aria-label="Like" 
-                                             color="#262626" 
-                                             fill="#262626" 
-                                             height="24" 
-                                             role="img"
-                                             viewBox="0 0 48 48" 
-                                             width="24">
-                                  <!-- Coordinate path  -->
-                                            <path
-                                                d="M34.6 6.1c5.7 0 10.4 5.2 10.4 11.5 
-                                                0 6.8-5.9 11-11.5 16S25 41.3 24 
-                                                41.9c-1.1-.7-4.7-4-9.5-8.3-5.7-5-11.5-9.2-11.5-16C3 
-                                                11.3 7.7 6.1 13.4 6.1c4.2 0 6.5 2 8.1 
-                                                4.3 1.9 2.6 2.2 3.9 2.5 3.9.3 0 .6-1.3 
-                                                2.5-3.9 1.6-2.3 3.9-4.3 8.1-4.3m0-3c-4.5 
-                                                0-7.9 1.8-10.6 5.6-2.7-3.7-6.1-5.5-10.6-5.5C6 
-                                                3.1 0 9.6 0 17.6c0 7.3 5.4 12 10.6 
-                                                16.5.6.5 1.3 1.1 1.9 1.7l2.3 2c4.4 3.9 
-                                                6.6 5.9 7.6 6.5.5.3 1.1.5 1.6.5.6 0 
-                                                1.1-.2 1.6-.5 1-.6 2.8-2.2 
-                                                7.8-6.8l2-1.8c.7-.6 1.3-1.2 2-1.7C42.7 
-                                                29.6 48 25 48 17.6c0-8-6-14.5-13.4-14.5z">
-                                            </path>
-                                        </svg>
-                                    </span>
-                                </span>
-                                <svg aria-label="Comment" 
-                                     class="_8-yf5 " 
-                                     color="#262626" 
-                                     fill="#262626" 
-                                     height="24"
-                                     role="img" 
-                                     viewBox="0 0 48 48" 
-                                     width="24">
-                                    <path clip-rule="evenodd"
-                               <!-- Coordinate path  -->
-                                        d="M47.5 46.1l-2.8-11c1.8-3.3 2.8-7.1 
-                                        2.8-11.1C47.5 11 37 .5 24 .5S.5 11 .5 24 11 
-                                        47.5 24 47.5c4 0 7.8-1 11.1-2.8l11 2.8c.8.2 
-                                        1.6-.6 1.4-1.4zm-3-22.1c0 4-1 7-2.6 10-.2.4-.3.9-.2 
-                                        1.4l2.1 8.4-8.3-2.1c-.5-.1-1-.1-1.4.2-1.8 
-                                        1-5.2 2.6-10 2.6-11.4 0-20.6-9.2-20.6-20.5S12.7 
-                                        3.5 24 3.5 44.5 12.7 44.5 24z"
-                                        fill-rule="evenodd"></path>
-                                </svg>
-                                <svg aria-label="Share Post" 
-                                     class="_8-yf5 " 
-                                     color="#262626" 
-                                     fill="#262626" 
-                                     height="24"
-                                     role="img" 
-                                     viewBox="0 0 48 48" 
-                                     width="24">
-                                    <path
-                                        d="M47.8 3.8c-.3-.5-.8-.8-1.3-.8h-45C.9 3.1.3 
-                                        3.5.1 4S0 5.2.4 5.7l15.9 15.6 5.5 22.6c.1.6.6 
-                                        1 1.2 1.1h.2c.5 0 1-.3 1.3-.7l23.2-39c.4-.4.4-1 .1-1.5zM5.2 
-                                        6.1h35.5L18 18.7 5.2 6.1zm18.7 33.6l-4.4-18.4L42.4 
-                                        8.6 23.9 39.7z">
-                                    </path>
-                                </svg>
-                            </div>
-                            <div class="right">
-                                <svg aria-label="Save"
-                                     class="_8-yf5 " 
-                                     color="#262626"
-                                     fill="#262626" 
-                                     height="24"
-                                     role="img" 
-                                     viewBox="0 0 48 48" 
-                                     width="24">
-                            <!-- Coordinate path  -->
-
-                                    <path
-                                        d="M43.5 48c-.4 0-.8-.2-1.1-.4L24 29 5.6 
-                                        47.6c-.4.4-1.1.6-1.6.3-.6-.2-1-.8-1-1.4v-45C3 .7 
-                                        3.7 0 4.5 0h39c.8 0 1.5.7 1.5 1.5v45c0 .6-.4 
-                                        1.2-.9 1.4-.2.1-.4.1-.6.1zM24 26c.8 0 1.6.3 
-                                        2.2.9l15.8 16V3H6v39.9l15.8-16c.6-.6 1.4-.9 2.2-.9z">
-                                    </path>
-                                </svg>
-                            </div>
-                        </div>
-                      <!-- Adding number of like and name of people  -->
-                        <a href="#">
-                            <p class="likes">119 likes</p>
-                        </a>
-                        <a href="#">
-                            <p class="message">
-                              <b>Piyush Agarwal</b>
-                            </p>
-                        </a>
-                        <a href="#">
-                            <h4 class="comments">View all 20 comments</h4>
-                        </a>
-                        <a href="#">
-                            <h5 class="postTime">4 hours ago</h5>
-                        </a>
-                        <div class="addComments">
-                            <div class="reaction">
-                                <h3><i class="far fa-smile"></i></h3>
-                            </div>
-                            <input type="text" 
-                                   class="text" 
-                                   placeholder="Add a comment...">
-                            <a href="#">Post</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="top">
-                        <div class="userDetails">
-                            <div class="profilepic">
-                                <div class="profile_img">
-                                    <div class="image">
-                                        <img src="./assets/images/user-3.jpeg" 
-                                            alt="img10">
-                                    </div>
-                                </div>
-                            </div>
-                            <h3>Keshav Agarwal<br>
-                              <span>Kolkata, India</span>
-                            </h3>
-                        </div>
-                        <div>
-                            <span class="dot">
-                                <i class="fas fa-ellipsis-h"></i>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="imgBx">
-                        <img src=
-"https://picsum.photos/id/1019/299/300" 
-                            alt="post-1" 
-                            class="cover">
-                    </div>
-                    <div class="bottom">
-                        <div class="actionBtns">
-                            <div class="left">
-                                <span class="heart" 
-                                      onclick="addlike()">
-                                    <span>
-                                        <svg aria-label="Like" 
-                                             color="#262626" 
-                                             fill="#262626" 
-                                             height="24" 
-                                             role="img"
-                                             viewBox="0 0 48 48"
-                                             width="24">
-                                            <path
-                                                d="M34.6 6.1c5.7 0 10.4 5.2 10.4 
-                                                11.5 0 6.8-5.9 11-11.5 16S25 41.3 
-                                                24 41.9c-1.1-.7-4.7-4-9.5-8.3-5.7-5-11.5-9.2-11.5-16C3 
-                                                11.3 7.7 6.1 13.4 6.1c4.2 0 6.5 2 8.1 
-                                                4.3 1.9 2.6 2.2 3.9 2.5 3.9.3 0 .6-1.3 
-                                                2.5-3.9 1.6-2.3 3.9-4.3 8.1-4.3m0-3c-4.5 
-                                                0-7.9 1.8-10.6 5.6-2.7-3.7-6.1-5.5-10.6-5.5C6 
-                                                3.1 0 9.6 0 17.6c0 7.3 5.4 12 10.6 16.5.6.5 
-                                                1.3 1.1 1.9 1.7l2.3 2c4.4 3.9 6.6 5.9 7.6 
-                                                6.5.5.3 1.1.5 1.6.5.6 0 1.1-.2 1.6-.5 1-.6 
-                                                2.8-2.2 7.8-6.8l2-1.8c.7-.6 1.3-1.2 2-1.7C42.7 
-                                                29.6 48 25 48 17.6c0-8-6-14.5-13.4-14.5z">
-                                            </path>
-                                        </svg>
-                                    </span>
-                                </span>
-                                <svg aria-label="Comment" 
-                                     class="_8-yf5 " 
-                                     color="#262626" 
-                                     fill="#262626" 
-                                     height="24"
-                                     role="img" 
-                                     viewBox="0 0 48 48" 
-                                     width="24">
-                                    <path clip-rule="evenodd"
-                                        d="M47.5 46.1l-2.8-11c1.8-3.3 2.8-7.1 
-                                        2.8-11.1C47.5 11 37 .5 24 .5S.5 11 .5 24 11 
-                                        47.5 24 47.5c4 0 7.8-1 11.1-2.8l11 2.8c.8.2 
-                                        1.6-.6 1.4-1.4zm-3-22.1c0 4-1 7-2.6 10-.2.4-.3.9-.2 
-                                        1.4l2.1 8.4-8.3-2.1c-.5-.1-1-.1-1.4.2-1.8 
-                                        1-5.2 2.6-10 2.6-11.4 0-20.6-9.2-20.6-20.5S12.7 
-                                        3.5 24 3.5 44.5 12.7 44.5 24z"
-                                        fill-rule="evenodd">
-                                  </path>
-                                </svg>
-                                <svg aria-label="Share Post"
-                                     class="_8-yf5 " 
-                                     color="#262626" 
-                                     fill="#262626" 
-                                     height="24"
-                                     role="img" 
-                                     viewBox="0 0 48 48" 
-                                     width="24">
-                                    <path
-                                        d="M47.8 3.8c-.3-.5-.8-.8-1.3-.8h-45C.9 
-                                        3.1.3 3.5.1 4S0 5.2.4 5.7l15.9 15.6 5.5 
-                                        22.6c.1.6.6 1 1.2 1.1h.2c.5 0 1-.3 
-                                        1.3-.7l23.2-39c.4-.4.4-1 .1-1.5zM5.2 
-                                        6.1h35.5L18 18.7 5.2 6.1zm18.7 
-                                        33.6l-4.4-18.4L42.4 8.6 23.9 39.7z">
-                                    </path>
-                                </svg>
-                            </div>
-                            <div class="right">
-                                <svg aria-label="Save" 
-                                     class="_8-yf5 " 
-                                     color="#262626" 
-                                     fill="#262626" 
-                                     height="24"
-                                     role="img" 
-                                     viewBox="0 0 48 48" 
-                                     width="24">
-                                    <path
-                                        d="M43.5 48c-.4 0-.8-.2-1.1-.4L24 29 5.6 
-                                        47.6c-.4.4-1.1.6-1.6.3-.6-.2-1-.8-1-1.4v-45C3 .7 
-                                        3.7 0 4.5 0h39c.8 0 1.5.7 1.5 1.5v45c0 .6-.4 
-                                        1.2-.9 1.4-.2.1-.4.1-.6.1zM24 26c.8 0 
-                                        1.6.3 2.2.9l15.8 16V3H6v39.9l15.8-16c.6-.6 
-                                        1.4-.9 2.2-.9z">
-                                    </path>
-                                </svg>
-                            </div>
-                        </div>
-                        <a href="#">
-                            <p class="likes">184 likes</p>
-                        </a>
-                        <a href="#">
-                            <p class="message">
-                              <b>Mayank</b> Nature 
-                                <span>#love</span>
-                                <span>#2021</span>
-                            </p>
-                        </a>
-                        <a href="#">
-                            <h4 class="comments">View all 25 comments</h4>
-                        </a>
-                        <a href="#">
-                            <h5 class="postTime">9 hours ago</h5>
-                        </a>
-                        <div class="addComments">
-                            <div class="reaction">
-                                <h3>
-                                  <i class="far fa-smile"></i>
-                               </h3>
-                            </div>
-                            <input type="text"
-                                   class="text" 
-                                   placeholder="Add a comment...">
-                            <a href="#">Post</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="sidebar">
-                <div class="card">
-                    <h4>Suggestions For You</h4>
-                    <div class="top">
-                        <div class="userDetails">
-                            <div class="profilepic">
-                                <div class="profile_img">
-                                    <div class="image">
-                                        <img src=
-"https://picsum.photos/seed/user1/200" 
-                                            alt="img12">
-                                    </div>
-                                </div>
-                            </div>
-                            <h3>Aditya Verma<br>
-                              <span>Follows You</span>
-                            </h3>
-                        </div>
-                        <div>
-                            <a href="#" 
-                               class="follow">follow
-                             </a>
-                        </div>
-                    </div>
-                    <div class="top">
-                        <div class="userDetails">
-                            <div class="profilepic">
-                                <div class="profile_img">
-                                    <div class="image">
-                                        <img src=
-"https://picsum.photos/seed/user2/200" 
-                                            alt="img13">
-                                    </div>
-                                </div>
-                            </div>
-                            <h3>Amit Singh<br>
-                              <span>Follows You</span>
-                           </h3>
-                        </div>
-                        <div>
-                            <a href="#" 
-                               class="follow">follow
-                           </a>
-                        </div>
-                    </div>
-                    <div class="top">
-                        <div class="userDetails">
-                            <div class="profilepic">
-                                <div class="profile_img">
-                                    <div class="image">
-                                        <img src=
-"https://picsum.photos/seed/user3/200" 
-                                            alt="img14">
-                                    </div>
-                                </div>
-                            </div>
-                            <h3>Piyush Agarwal<br>
-                                <span>Followed by Keshav Agarwal</span>
-                            </h3>
-                        </div>
-                        <div>
-                            <a href="#" 
-                               class="follow">follow</a>
-                        </div>
-                    </div>
-                    <div class="top">
-                        <div class="userDetails">
-                            <div class="profilepic">
-                                <div class="profile_img">
-                                    <div class="image">
-                                        <img src=
-"https://picsum.photos/seed/user4/200" 
-                                            alt="img15">
-                                    </div>
-                                </div>
-                            </div>
-                            <h3>Amit Sharma<br>
-                              <span>Follows You</span>
-                            </h3>
-                        </div>
-                        <div>
-                            <a href="#" 
-                               class="follow">follow
-                           </a>
-                        </div>
-                    </div>
-                    <div class="top">
-                        <div class="userDetails">
-                            <div class="profilepic">
-                                <div class="profile_img">
-                                    <div class="image">
-                                        <img src=
-"https://picsum.photos/seed/user5/200" 
-                                            alt="img16" 
-                                            class="cover">
-                                    </div>
-                                </div>
-                            </div>
-                            <h3>Raj Goel<br>
-                                <span>Followed by Keshav Agarwal</span>
-                            </h3>
-                        </div>
-                        <div>
-                            <a href="#" 
-                               class="follow">follow
-                            </a>
-                        </div>
-                    </div>
-                </div>
-             <!-- Our Footer Section will start from Here -->
-                <div class="footer">
-                    <a class="footer-section" href="#">About</a>
-                    <a class="footer-section" href="#">Help</a>
-                    <a class="footer-section" href="#">API</a>
-                    <a class="footer-section" href="#">Jobs</a>
-                    <a class="footer-section" href="#">Privacy</a>
-                    <a class="footer-section" href="#">Terms</a>
-                    <a class="footer-section" href="#">Locations</a>
-                    <br>
-                    <a class="footer-section" href="#">Top Accounts</a>
-                    <a class="footer-section" href="#">Hashtag</a>
-                    <a class="footer-section" href="#">Language</a>
-                    <br><br>
-                    <span class="footer-section">
-                        &copy; 2023 INSTAGRAM FROM FACEBOOK
-                    </span>
+                <div class="profile">
+                    <button class="avatar" aria-label="User profile menu">U</button>
                 </div>
             </div>
         </div>
+    </header>
+
+    <section class="hero" role="region" aria-label="Featured content">
+        <div class="hero-content">
+            <h2 class="hero-title">Stranger Things</h2>
+            <div class="hero-buttons">
+                <button class="btn btn-play" aria-label="Play Stranger Things">
+                    <i class="fas fa-play" aria-hidden="true"></i>
+                    Play
+                </button>
+                <button class="btn btn-info" aria-label="More information about Stranger Things">
+                    <i class="fas fa-info-circle" aria-hidden="true"></i>
+                    More Info
+                </button>
+            </div>
+            <p class="hero-description">
+                When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces and one strange little girl.
+            </p>
+            <div class="hero-meta">
+                <span class="match">98% Match</span>
+                <span class="year">2024</span>
+                <span class="rating">16+</span>
+                <span class="seasons">4 Seasons</span>
+            </div>
+        </div>
+    </section>
+
+    <main class="content" role="main">
+        <section class="movie-row" aria-label="Trending now">
+            <h3 class="row-title">Trending Now</h3>
+            <div class="row-wrapper">
+                <div class="row-container">
+                    <article class="movie-card">
+                        <div class="movie-thumbnail" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);" role="img" aria-label="The Crown poster">
+                            <div class="rank" aria-hidden="true">1</div>
+                        </div>
+                        <div class="movie-info">
+                            <h4>The Crown</h4>
+                            <div class="movie-stats">
+                                <span class="match-score">95% Match</span>
+                                <span class="duration">6 Seasons</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="movie-card">
+                        <div class="movie-thumbnail" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);" role="img" aria-label="Breaking Bad poster">
+                            <div class="rank" aria-hidden="true">2</div>
+                        </div>
+                        <div class="movie-info">
+                            <h4>Breaking Bad</h4>
+                            <div class="movie-stats">
+                                <span class="match-score">99% Match</span>
+                                <span class="duration">5 Seasons</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="movie-card">
+                        <div class="movie-thumbnail" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);" role="img" aria-label="Dark poster">
+                            <div class="rank" aria-hidden="true">3</div>
+                        </div>
+                        <div class="movie-info">
+                            <h4>Dark</h4>
+                            <div class="movie-stats">
+                                <span class="match-score">92% Match</span>
+                                <span class="duration">3 Seasons</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="movie-card">
+                        <div class="movie-thumbnail" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);" role="img" aria-label="Squid Game poster">
+                            <div class="rank" aria-hidden="true">4</div>
+                        </div>
+                        <div class="movie-info">
+                            <h4>Squid Game</h4>
+                            <div class="movie-stats">
+                                <span class="match-score">97% Match</span>
+                                <span class="duration">1 Season</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="movie-card">
+                        <div class="movie-thumbnail" style="background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);" role="img" aria-label="Money Heist poster">
+                            <div class="rank" aria-hidden="true">5</div>
+                        </div>
+                        <div class="movie-info">
+                            <h4>Money Heist</h4>
+                            <div class="movie-stats">
+                                <span class="match-score">94% Match</span>
+                                <span class="duration">5 Seasons</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="movie-card">
+                        <div class="movie-thumbnail" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);" role="img" aria-label="Bridgerton poster">
+                            <div class="rank" aria-hidden="true">6</div>
+                        </div>
+                        <div class="movie-info">
+                            <h4>Bridgerton</h4>
+                            <div class="movie-stats">
+                                <span class="match-score">89% Match</span>
+                                <span class="duration">2 Seasons</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="movie-card">
+                        <div class="movie-thumbnail" style="background: linear-gradient(135deg, #ff6b6b 0%, #4ecdc4 100%);" role="img" aria-label="The Witcher poster">
+                            <div class="rank" aria-hidden="true">7</div>
+                        </div>
+                        <div class="movie-info">
+                            <h4>The Witcher</h4>
+                            <div class="movie-stats">
+                                <span class="match-score">91% Match</span>
+                                <span class="duration">3 Seasons</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="movie-row" aria-label="Popular on StreamFlix">
+            <h3 class="row-title">Popular on StreamFlix</h3>
+            <div class="row-wrapper">
+                <div class="row-container">
+                    <article class="movie-card">
+                        <div class="movie-thumbnail" style="background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);" role="img" aria-label="Wednesday poster"></div>
+                        <div class="movie-info">
+                            <h4>Wednesday</h4>
+                            <div class="movie-stats">
+                                <span class="match-score">91% Match</span>
+                                <span class="duration">1 Season</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="movie-card">
+                        <div class="movie-thumbnail" style="background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);" role="img" aria-label="The Witcher poster"></div>
+                        <div class="movie-info">
+                            <h4>Ozark</h4>
+                            <div class="movie-stats">
+                                <span class="match-score">93% Match</span>
+                                <span class="duration">4 Seasons</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="movie-card">
+                        <div class="movie-thumbnail" style="background: linear-gradient(135deg, #ff6e7f 0%, #bfe9ff 100%);" role="img" aria-label="Peaky Blinders poster"></div>
+                        <div class="movie-info">
+                            <h4>Peaky Blinders</h4>
+                            <div class="movie-stats">
+                                <span class="match-score">96% Match</span>
+                                <span class="duration">6 Seasons</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="movie-card">
+                        <div class="movie-thumbnail" style="background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);" role="img" aria-label="The Umbrella Academy poster"></div>
+                        <div class="movie-info">
+                            <h4>The Umbrella Academy</h4>
+                            <div class="movie-stats">
+                                <span class="match-score">87% Match</span>
+                                <span class="duration">3 Seasons</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="movie-card">
+                        <div class="movie-thumbnail" style="background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);" role="img" aria-label="Black Mirror poster"></div>
+                        <div class="movie-info">
+                            <h4>Black Mirror</h4>
+                            <div class="movie-stats">
+                                <span class="match-score">90% Match</span>
+                                <span class="duration">5 Seasons</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="movie-card">
+                        <div class="movie-thumbnail" style="background: linear-gradient(135deg, #fdcbf1 0%, #e6dee9 100%);" role="img" aria-label="Succession poster"></div>
+                        <div class="movie-info">
+                            <h4>Succession</h4>
+                            <div class="movie-stats">
+                                <span class="match-score">94% Match</span>
+                                <span class="duration">4 Seasons</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="movie-card">
+                        <div class="movie-thumbnail" style="background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);" role="img" aria-label="The Last of Us poster"></div>
+                        <div class="movie-info">
+                            <h4>The Last of Us</h4>
+                            <div class="movie-stats">
+                                <span class="match-score">98% Match</span>
+                                <span class="duration">1 Season</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="movie-row" aria-label="Continue watching">
+            <h3 class="row-title">Continue Watching</h3>
+            <div class="row-wrapper">
+                <div class="row-container">
+                    <article class="movie-card">
+                        <div class="movie-thumbnail" style="background: linear-gradient(135deg, #48c6ef 0%, #6f86d6 100%);" role="img" aria-label="Narcos poster">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-fill" style="width: 65%;"></div>
+                            </div>
+                        </div>
+                        <div class="movie-info">
+                            <h4>Narcos</h4>
+                            <div class="movie-stats">
+                                <span class="episode">S2:E5</span>
+                                <span class="duration">38 min left</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="movie-card">
+                        <div class="movie-thumbnail" style="background: linear-gradient(135deg, #f77062 0%, #fe5196 100%);" role="img" aria-label="Vikings poster">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-fill" style="width: 30%;"></div>
+                            </div>
+                        </div>
+                        <div class="movie-info">
+                            <h4>Vikings</h4>
+                            <div class="movie-stats">
+                                <span class="episode">S4:E12</span>
+                                <span class="duration">52 min left</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="movie-card">
+                        <div class="movie-thumbnail" style="background: linear-gradient(135deg, #c471f5 0%, #fa71cd 100%);" role="img" aria-label="Lucifer poster">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-fill" style="width: 85%;"></div>
+                            </div>
+                        </div>
+                        <div class="movie-info">
+                            <h4>Lucifer</h4>
+                            <div class="movie-stats">
+                                <span class="episode">S3:E9</span>
+                                <span class="duration">12 min left</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="movie-card">
+                        <div class="movie-thumbnail" style="background: linear-gradient(135deg, #3f2b96 0%, #a8c0ff 100%);" role="img" aria-label="The Office poster">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-fill" style="width: 45%;"></div>
+                            </div>
+                        </div>
+                        <div class="movie-info">
+                            <h4>The Office</h4>
+                            <div class="movie-stats">
+                                <span class="episode">S5:E3</span>
+                                <span class="duration">15 min left</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="movie-card">
+                        <div class="movie-thumbnail" style="background: linear-gradient(135deg, #ff0844 0%, #ffb199 100%);" role="img" aria-label="Suits poster">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-fill" style="width: 20%;"></div>
+                            </div>
+                        </div>
+                        <div class="movie-info">
+                            <h4>Suits</h4>
+                            <div class="movie-stats">
+                                <span class="episode">S7:E8</span>
+                                <span class="duration">41 min left</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="movie-card">
+                        <div class="movie-thumbnail" style="background: linear-gradient(135deg, #00d2ff 0%, #3a7bd5 100%);" role="img" aria-label="House of Cards poster">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-fill" style="width: 70%;"></div>
+                            </div>
+                        </div>
+                        <div class="movie-info">
+                            <h4>House of Cards</h4>
+                            <div class="movie-stats">
+                                <span class="episode">S2:E11</span>
+                                <span class="duration">28 min left</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="movie-card">
+                        <div class="movie-thumbnail" style="background: linear-gradient(135deg, #ffeaa7 0%, #fd79a8 100%);" role="img" aria-label="Friends poster">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-fill" style="width: 55%;"></div>
+                            </div>
+                        </div>
+                        <div class="movie-info">
+                            <h4>Friends</h4>
+                            <div class="movie-stats">
+                                <span class="episode">S9:E4</span>
+                                <span class="duration">22 min left</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
     </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="#" aria-label="Visit our Facebook page">
+                    <i class="fab fa-facebook" aria-hidden="true"></i>
+                </a>
+                <a href="#" aria-label="Visit our Instagram page">
+                    <i class="fab fa-instagram" aria-hidden="true"></i>
+                </a>
+                <a href="#" aria-label="Visit our Twitter page">
+                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                </a>
+                <a href="#" aria-label="Visit our YouTube channel">
+                    <i class="fab fa-youtube" aria-hidden="true"></i>
+                </a>
+            </div>
+            <div class="footer-links">
+                <a href="#">Audio and Subtitles</a>
+                <a href="#">Help Center</a>
+                <a href="#">Gift Cards</a>
+                <a href="#">Media Center</a>
+                <a href="#">Investor Relations</a>
+                <a href="#">Jobs</a>
+                <a href="#">Terms of Use</a>
+                <a href="#">Privacy</a>
+                <a href="#">Legal Notices</a>
+                <a href="#">Cookie Preferences</a>
+                <a href="#">Corporate Information</a>
+                <a href="#">Contact Us</a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
